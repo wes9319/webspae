@@ -1,0 +1,99 @@
+head	1.6;
+access;
+symbols;
+locks
+	spaequito:1.6; strict;
+comment	@# @;
+
+
+1.6
+date	2015.09.19.18.16.46;	author spaequito;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2015.09.19.18.16.10;	author spaequito;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2015.09.19.18.13.46;	author spaequito;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2015.09.19.18.12.35;	author spaequito;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2015.09.19.17.54.54;	author spaequito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2015.09.19.17.54.54;	author spaequito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@jorge:x:6558:6557::/home/spaequito/mail/spaequito.com/jorge:/home/spaequito
+administracion:x:6558:6557::/home/spaequito/mail/spaequito.com/administracion:/home/spaequito
+ewvv:x:6558:6557::/home/spaequito/mail/spaequito.com/ewvv:/home/spaequito
+cdta:x:6558:6557::/home/spaequito/mail/spaequito.com/cdta:/home/spaequito
+sebc:x:6558:6557::/home/spaequito/mail/spaequito.com/sebc:/home/spaequito
+@
+
+
+1.5
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d5 1
+@
+
+
+1.4
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d4 1
+@
+
+
+1.3
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d3 1
+@
+
+
+1.2
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d2 1
+@
+
+
+1.1
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d1 1
+@

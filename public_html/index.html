@@ -1,0 +1,402 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+
+<script language="JavaScript">
+//Actualizar una vez al cargar página
+//script por tunait!
+//ver condiciones de uso en http://javascript.tunait.com/
+window.onunload = sale
+var valor;
+if(document.cookie){
+	galleta = unescape(document.cookie)
+	galleta = galleta.split(';')
+	for(m=0; m<galleta.length; m++){
+		if(galleta[m].split('=')[0] == "recarga"){
+		valor = galleta[m].split('=')[1]
+		break;
+		}
+	}
+if(valor == "sip"){
+	document.cookie = "recarga=nop"; 
+	window.onunload = function(){}
+	document.location.reload()
+	}
+else{
+window.onunload=sale
+	}
+}
+
+function sale(){
+document.cookie ="recarga=sip"
+}
+</script>
+
+	<meta charset="utf-8">
+	
+	<title>Hosting Ecuador EC - Empezando a utilizar mi cuenta de hosting</title>
+	
+	<meta name="description" content="">
+    <meta HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="DSA79">
+	<meta name="copyright" content="DSA79">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2014-03-30T17:21:15+02:00">
+	
+	<link rel="stylesheet" href="documenter_style.css" media="all">
+	<link rel="stylesheet" href="google-code-prettify/prettify.css" media="screen">
+	<script src="google-code-prettify/prettify.js"></script>
+
+	<link rel="stylesheet" href="custom.css" media="screen">
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<script src="jquery.js"></script>
+	<script src="cufon.js"></script><script src="font.js"></script><script>Cufon.replace("h1, h2, h3, h4, h5, h6");</script>
+	<script src="jquery.scrollTo.js"></script>
+	<script src="jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='450',easing='easeOutExpo';</script>
+	<script src="script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(image_1.png);}
+		a{color:#428bca; font-weight: 600;}
+		
+		ol li { padding: 3px 0;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#EFAD0D), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #aaa;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{ background-color: #333;color: #222222; font-size: 14px;}
+
+		#documenter_sidebar ul a.current{background:#428bca;color:#fff;}
+		#documenter_sidebar ul a{color:#aaa;}
+		#documenter_sidebar ul a:hover{background:#428bca;color:#fff;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-Crossway">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#inicio">Bienvenido</a></li>
+				
+			<li><a href="#tips" title="Tips">Instrucciones</a></li>
+			<li><a href="#dominios" title="Información de dominios">Dominios / IP&acute;s</a></li>
+			<li><a href="#email" title="Cuentas de email">Cuentas de email</a></li>
+			<li><a href="#carga_de_informacion" title="Files Structure">Carga de informaci&oacute;n</a></li>
+			<li><a href="#herramientas" title="herramientas del cpanel">Herramientas</a></li>
+			<li><a href="#instaladores" title="Autoinstaladores y CMS">Auto Instaladores</a></li>
+			<li><a href="#javascript" title="versiones php">Versiones PHP</a></li>
+			<li><a href="#respaldos_backups" title="Respaldos">Respaldos</a></li>
+			<li><a href="#restricciones" title="Restricciones">Restricciones</a></li>
+			<li><a href="#mantenimiento" title="Mantenimiento de cuentas">Mantenimiento</a></li>
+			<li><a href="#soporte" title="Soporte tecnico">Soporte técnico</a></li>
+			<li><a href="#legal" title="Support">Legal</a></li>
+
+		</ul>
+		<div id="documenter_copyright">
+		  <h2><a href="http://hostingecuador.ec/" target="_blank">Hosting Ecuador EC</a><br>
+		  </h2>
+		
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="inicio">
+	<h1>Grupo Farency - Hosting Ecuador EC</h1>
+	<h2>Guia rapida sobre el manejo de su cuenta de hosting</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+<h4><a href="#"><img name="" src="http://www.alt64.org/wiki/images/Advertencia-64.png" width="64" height="64" alt="">&nbsp; NOTA: Algunas tildes y/o caracteres especiales han sido eliminados para mejorar compatibilidad</a> </h4>
+	<h2>Puede acceder a una explicacion resumida escuchando este material en audio.</h2>
+
+	<p>
+	  <object type="application/x-shockwave-flash" data="dewplayer.swf?mp3=test1.mp3" width="200" height="20" id="dewplayer">
+	    <param name="wmode" value="transparent" />
+	    <param name="movie" value="dewplayer.swf?mp3=test1.mp3" />
+      </object> 
+	  (active un dispositivo de audio para escuchar)
+	</p>
+	<ul>
+	 
+	  </ul>
+	<p>&nbsp;</p>
+	<p><strong><a href="#">IMPORTANTE</a>: Cuando haya terminado de revisar este material puede eliminarlo simplemente haciendo clic en el botón de eliminar &nbsp; &nbsp; <a href="delete.php"><img src="image_4.png" width="107" height="28" alt="eliminar"></a></strong></p>
+	<p>
+	  <p><strong>Bienvenido:</strong> Antes que nada deseamos agradecer su compra y confianza en nuestra marca, contamos con el sistema de soporte al cliente mas eficiente y rápido en el mercado y ser&aacute; un placer ayudarlo con sus requerimientos<br />
+<strong> <br>
+Listo para iniciar ?</strong><br />
+
+En el lado izquierdo podr&aacute; seleccionar entre los items más útiles y populares al momento de utilizar un servicio de web hosting. Asegúrese de comprender todos los aspectos detallados en este documento, el hacerlo le garantiza un óptimo aprovechamiento de su inversión y una experiencia de uso optimizada
+
+
+<h5>Con tu &quot;LIKE" podras recibir noticias y actualizaciones importantes<br>
+</h5>
+
+<p align="left"><iframe src="http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/hostingecuador.ec" 
+scrolling="no" frameborder="0" 
+style=border:none;width:450px;height:66px></iframe></p> 
+
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	</p>
+	</section>
+	
+	<section id="tips">
+	<div class="page-header"><h3>Importante</h3><hr class="notop"></div>
+<p class="info">
+	Toda la informaci&oacute;n necesaria para el acceso a su cuenta ha sido enviada al email del registrante de la cuenta, conserve esa informaci&oacute;n en un lugar seguro.</p>
+    <p class="info">
+	Cargar informaci&oacute;n &uacute;nicamente en la carpeta &quot;public_html&quot;, si lo hace en otro lado su cuenta puede no funcionar correctamente</p>
+<p class="info">
+	Configurar correctamente los par&aacute;metros de &quot;DNS o NS&quot;&nbsp;en su dominio. Si ha comprado el dominio con nosotros no necesita realizar ninguna configuraci&oacute;n</p>
+<p class="info">
+	Una vez recibida la informaci&oacute;n de acceso a su cuenta cambie todas las contrase&ntilde;as. No use palabras del diccionario ni nombres o fechas que puedan asociarse a usted o sus familiares</p>
+<p class="info">
+	Revise todo el material de soporte necesario antes de realizar cualquier configuraci&oacute;n de su cuenta. Para ello incluimos mas de 180 videos de soporte.</p>
+<p class="info">
+	No intente enviar email masivo, su cuenta no esta configurada con esa finalidad. si necesita enviar correo masivo contacte con nosotros.</p>
+</section>
+<section id="dominios">
+	<div class="page-header">
+	  <h3>Sobre su dominio, las IP&acute;s y formas de acceder a su cuenta</h3><hr class="notop"></div>
+<ol>
+  <li><strong>URL TEMPORAL: </strong>Hasta que su dominio se propague puede usar su URL temporal para acceder a su cuenta de hosting y realizar algunos procedimeintos como cargar su informaci&oacute;n, crear cuentas de correo o instalar alg&uacute;n script, <strong>por ejemplo</strong>, si su URL temporal es &quot;http://192.185.1246.124/~cliente&quot;&nbsp;<strong> &uacute;nicamente reemplace</strong> &quot;~cliente/&quot; por la palabra &quot;cpanel&quot; de tal manera que su URL quede de esta forma: &quot;http://192.185.1246.124/cpanel&quot;. El sistema le pedira usuario y contrase&ntilde;a, utilice los datos que llegaron en el e-mail de informaci&oacute;n de su cuenta</li>
+		<li><strong>Nunca deje que su dominio expire</strong> - Una vez que la fecha l&iacute;mite de renovaci&oacute;n del dominio se ha vencido el dominio puede entrar en un proceso de subasta, recuperarlo no es seguro y si logra hacerlo le costar&aacute; mucho mas de lo que ha pagado por el inicialmente.</li>
+		<li><strong>Configure su dominio</strong> - Para que sus clientes puedan acceder a su website su desde su dominio usted deber&aacute; tenerlo ya configurado con los par&aacute;metros que se le envían al momento de configurar la cuenta</li>
+		<li><strong>Tiempo de propagaci&oacute;n</strong>&nbsp;- Un dominio puede demorar en propagarse hasra 48 horas, esto no depende de ning&uacute;n proveedor de hosting y no hay forma de acelerar este proceso, le recomendamos tomar en cuenta este particular siempre pensando en el beneficio para sus clientes</li>
+		<li><strong>Su IP</strong> - Una IP es asignada a usted al momento de comprar una cuenta de hosting, es una serie de números parecido a esto &quot;192.100.236.110 &quot; esto le servir&aacute; para configurar funciones como cuentas de correo o FTP. Su IP no puede cambiarse a voluntad</li>
+		<li><strong>Dominios adicionales</strong> - Usted puede comprar mas dominios para que todos ellos apunten a su misma cuenta de hosting, el hacerlo le puede traer ventajas en relaci&oacute;n a su competencia, mientras mas dominio tenga que se relacionen con sus servicios usted est&aacute; limitando a la competencia a usar esos dominios en su contra</li>
+		<li><strong>Precios de dominios</strong> - El precio del dominio que usted ha pagado al momento de comprar su cuenta ya posee un descuento inicial por que est&aacute; asociado a una cuenta de hosting. Si usted desea contratar dominios adicionales sin el servicio de hosting consulte con nosotros para ofrecerle la mejor alternativa para hacerlo</li>
+	<li><strong>Transferencia de dominios</strong>&nbsp;- Si ha comprado un dominio con nosotros usted puede solicitar la transferencia del dominio&nbsp;en cualquier momento, sin embargo para que los servicios asociados a su dominio trabajen correctamente le recomendamos mantener el servicio de hosting y dominio en un s&oacute;lo proveedor</li>
+</ol>
+</section>
+
+<section id="email">
+	<div class="page-header">
+  <h3>Creacion de cuentas de email y configuraciones basicas</h3><hr class="notop"></div>
+	
+	<p>Grupo Farency ofrece la opci&oacute;n de solicitar la creaci&oacute;n y configuraci&oacute;n de sus cuentas de correo sin costo alguno al momento de contratar el servicio.</p>
+	
+  <div class="alert alert-info"><b>Importante!</b> Para que el servicio de email funcione correctamente por favor asegúrese de que su dominio est&eacute; configurado  con los datos enviados</div>
+    
+    <p><strong>Crear cuentas de correo</strong> -  Puede crear las cuentas de correo desde su Cpanel en el siguiente orden: CPANEL &gt; MAIL &gt; EMAIL ACCOUNTS.</p>
+    <p><strong>Configuraciones para usar Outlook</strong> - Dependiendo de la versi&oacute;n de Outlook que usted tenga favor <a href="http://www.farencyhost.com/50-como-configurar-el-servicio-de-email-en-outlook">revisar estos  instructivos</a></p>
+    <p><strong>Tiene muchas cuentas de email y se est&aacute; volviendo loco ?</strong> - Use GMAIL para centralizar todas sus cuentas en un s&oacute;lo servicio y ahorre tiempo enviando y recibiendo email&nbsp;y utilizando siempre su propio dominio. <a href="http://www.farencyhost.com/21-gmail-puede-enviar-correo-con-el-nombre-de-tu-empresa">Puede ver la configuraci&oacute;n aqu&iacute;</a></p>
+    <p><strong>Email desde el celular</strong> - Puede usar el procedimiento anterior o a su vez configurar en su celular el servicio de email, consulte con su proveedor la forma correcta de hacerlo y tenga a mano su direcci&oacute;n IP</p>
+
+</section>
+
+<section id="carga_de_informacion">
+	<div class="page-header">
+  <h3>Como cargar informacion en su servicio de hosting ?</h3><hr class="notop"></div>
+
+<p>Debe cargar todos los archivos en la carpeta <strong>&quot;PUBLIC_HTML&quot;</strong> de no hacerlo ahi su website puede presentar errores</p>
+<strong>OPCION 1:</strong>
+
+<pre>
+<strong>CPANEL &gt;</strong> Files &gt; File manager &gt; Web root (public_html/www)
+
+<img src="file1.png" width="410" height="306"></pre>
+<br>
+<br>
+<strong>OPCION 2:</strong><br>
+<pre>
+<strong>USANDO FTP:</strong> También puede subir sus archivos usando cualquier programa FTP. Recomendamos <a href="https://filezilla-project.org/">FILEZILLA</a></pre>
+</section>
+
+<section id="herramientas">
+	<div class="page-header">
+  <h3>Herramientas de uso frecuente</h3><hr class="notop"></div>
+<p>&nbsp;</p>
+
+<h5 id="herramientas_html_markup">Principales herramientas&nbsp;- Acceda desde su Cpanel</h5>
+<ul>
+  <li>Email Accounts - Crea cuentas de email</li>
+  <li>Forwarders - Le permite crear redirecciones para enviar duplicados del email entrante a otras cuentas</li>
+  <li>FTP accounts - Le permite crear cuentas FTP para subir información a su servicio de hosting</li>
+  <li>Backup Wizard - Le guía paso a paso para obtener respaldos de su información</li>
+  <li>Awstats - Le permite obtener estadísticas de como se comportan sus visitantes en su página web</li>
+  <li>Domains - Gestiona lo relacionado con su(s) dominio(s)</li>
+  <li>MySQL Wizard - Le guía paso a paso para crear una base de datos, no necesita conocimiéntos técnicos</li>
+  <li>Quick Install y Fantástico - Le permiten instalar automáticamente aplicaciones en pocos pasos</li>
+</ul>
+<h5 class="prettyprint lang-plain linenums"><br>
+  <strong>No esta seguro de poder usar alguna de estas funciones ?</strong></h5>
+<p>Somos consientes que esto al principio puede asustar, por eso siempre recuerde que somos el único proveedor que pone  a su disposición un sitio web para pruebas y entrenamiento. Siéntase libre de juguetear aquí cuando lo necesite y sin poner en riesgo su cuenta</p>
+<p>&nbsp;
+</p>
+<div class="alert alert-info">
+	Recuerde limpiar el desorden una vez que haya terminado&nbsp; =)</div>
+<p class="L5"><span class="alert alert-info">Acceda a nuestro sitio web de entrenamiento desde nuestra URL principal</span>: <a href="http://hostingecuador.ec/prueba-gratis-el-servicio-de-hosting">http://hostingecuador.ec/</a></p>
+</section>
+<section id="instaladores">
+	<div class="page-header">
+  <h3>Auto - Instaladores &quot;Joomla, WordPress, Moodle etc.</h3><hr class="notop"></div>
+<p>
+	Su cuenta de hosting viene equipada con un paquete de aplicaciones como Joomla o Wordpress que usted podrá instalar de manera automática sin necesidad de conocimiento técnico. Únicamente siga las instrucciones y su nueva página web estará lista en minutos</p>
+<ol>
+	<li>
+<strong>NOTA</strong> - El sistema realiza instalaciones limpias por defecto de cada uno de los scripts disponibles esto incluye características nativas y políticas de uso de cada una de las versiones del software instalado. Grupo Farency no ofrece soporte gratuito en aplicaciones de terceros sin embargo ofreceremos alternativas para casos como actualizaciones, diseño, personalización o instalación  de aplicativos que el cliente requiera</li>
+</ol>
+
+<h5>Puede instalar sus aplicaciones en el siguiente apartado</h5>
+
+<p>Cpanel &gt; Software/Services &gt; QuickInstall o Fantastico De Luxe</p>
+
+<pre class="prettyprint lang-css linenums">
+<img src="image_2.png" width="505" height="176" alt="cpanel">
+</pre>
+
+<p class="info">En algunos casos para que funcione correctamente una aplicación deberá tener un dominio activo.</p>
+</section>
+<section id="javascript">
+  <div class="page-header">
+	  <h3>Versiones PHP&nbsp;- Version 5,3 disponible</h3><hr class="notop"></div>
+<p>
+	En algunas ocasiones puede ser necesario subir la versión de PHP para que funcionen correctamente algunas aplicaciones externas. Puede solicitar sin costo esta actualización directamente en nuestro website o lo puede hacer usted simplemente insertando el siguiente código dentro del archivo .htaccess</p>
+<pre style="overflow: auto !important;" class="prettyprint lang-css linenums">
+   # Use PHP 5.3
+   AddType application/x-httpd-php53 .php</pre>
+<ol>
+  <p>&nbsp;</p>
+  <p><strong>Necesita ayuda ? </strong>Para ver información detallada de cómo realizar este procedimiento <a href="http://www.farencyhost.com/18-como-instalar-php-5-3">ingrese aquí</a>. Si no está seguro de cómo hacerlo contáctenos y lo haremos por usted</p>
+			
+</ol>
+</section>
+
+<section id="respaldos_backups">
+	<div class="page-header">
+  <h3>Seguridad y respaldos de informacion</h3><hr class="notop"></div>
+<h4 id="respaldos_backups__nbsp">&nbsp;</h4>
+
+<h4 id="respaldos_backups_choosing_layout">Es importante que tenga en cuenta lo siguiente:</h4>
+<p>Grupo Farency cuenta tecnología estandar en sistemas de prevención de ataques informáticos y filtros avanzados de seguridad <strong>sin embargo siempre recuerde</strong> que la responsabilidad de mantener salva la información es adjudicada al cliente final, usted deberá tomar todas las medidas de prevención dependiendo del nivel de seguridad que desee implementar en su servicio de hosting.</p>
+<p>Tambi&eacute;n ofrecemos&nbsp;el servicio de mantenimiento, respaldos de informaci&oacute;n y soporte t&eacute;cnico personalizado para cada cliente en el manejo de su cuenta de hosting . Si esto definitivamente no es lo suyo solicite informaci&oacute;n y por una cuota anual y nos haremos cargo de todo en cuanto a mantenimiento y configuraciones de su servicio de hosting</p>
+<p>&nbsp;</p>
+	
+<h4 id="respaldos_backups_changing_fonts">Respaldos desde su Cpanel:  </h4>
+<p><strong>Ingrese a su cpanel y utilice cualquiera de los administradores de archivos</strong></p>
+<p><strong><img src="image_3.png" width="505" height="176" alt="respaldos hosting"></strong></p>
+	<p>&nbsp;</p>
+  <h4><strong>Respaldos para Joomla&emsp;</strong></h4>
+  <p>Para Joomla recomendamos ampliamente la herramienta AkeebaBackup esta herramienta saca respaldos de todo su sitio incluyendo bases de datos. Puede ser usada para migrar un sitio web completo en solo minutos</p>
+  <p>Para obtener mayor información sobre cómo usarla <a href="http://www.farencyhost.com/5-respaldos-de-tu-sitio-joomla">ingrese aquí</a></p>
+  <p>&nbsp;
+</p>		
+</section>
+
+<section id="restricciones">
+	<div class="page-header">
+	  <h3>Que no puede hacer =(</h3><hr class="notop"></div>
+<p>
+	Al momento de contratar una cuenta de hosting usted está aceptando nuestros <a href="http://hostingecuador.ec/terminos-y-condiciones-de-uso-del-servicio" target="_blank">términos y condiciones de uso del servicio</a>, esto implica responsabilidades de parte y parte con la finalidad de que usted obtenga la mejor experiencia durante su estancia en nuestros servidores, sin embargo vale recordar  las principales infracciones que se debe evitar:</p>
+<ul>
+  <li>Envío de email masivo está prohibido, si necesita hacerlo contacte con nosotros antes</li>
+  <li>Difusión de pornografía, juegos de azar y/o loterías de cualquier tipo, promoción ilegal directa o indirecta de música, videos o cualquier material protegido por derechos de autor</li>
+  <li>Cualquier tipo de actividad irresponsable o maliciosa que la lógica y el sentido común te lo digan al oído, o que esté penalizada por las leyes y reglamentos vigentes</li>
+ 
+  </ul>
+<p>Cualquier tipo violación o infracción en estos puntos puede resultar en la terminación de su cuenta sin aviso previo y sin posibilidad de reembolso, no importa lo que usted pueda argumentar al respecto</p>
+<h5 id="icons_html_markup">&nbsp;</h5>
+<div class="line number1 index0 alt2"></div>
+</section>
+<section id="mantenimiento">
+	<div class="page-header">
+  <h3>Mantenimiento de la cuenta de hosting</h3><hr class="notop"></div>
+<p>
+	Una cuenta de hosting podrá trabajar de corrido y durante mucho tiempo casi sin presentar ningún inconveniente o necesidad de mantenimiento, sin embargo siga estas cortas recomendaciones con la finalidad de mantener un buen rendimiento de su cuenta</p>
+<ul>
+  <li>Revise de vez en cuando la capacidad de sus cuentas de correo. Si quieres obtener espacio ilimitado en tu bandeja de entrada utiliza Outlook, o consulta con nosotros cómo hacerlo</li>
+  <li>Evite cargar directamente videos, utilice sistemas de incrustación para evitar consumir recursos de su cuenta</li>
+  <li>Lo que no use desactívelo o elimínelo, esto aplica a archivos abandonados, links rotos, scripts almacenados o instalados sin ninguna función</li>
+	<li>Evite usar Flash, a menos que su actividad dependa de ello</li>
+	<li>Cambie sus claves periódicamente</li>
+	<li>Ha escuchado de <a href="http://www.cloudflare.com/">CLOUDFLARE</a> ?,&nbsp;este servicio mejorará mucho el rendimiento de su website. Recomendamos dar un vistazo</li>
+</ul>
+</section>
+<section id="soporte">
+	<div class="page-header">
+	  <h3>Soporte tecnico y asesoria</h3><hr class="notop"></div>
+<h4>
+	Contactanos y estaremos encantados de ayudarte</h4>
+<p>
+	Nuestro servicio está orientado a crear oportunidades y generar ingresos, si estás aquí es por que has decidido tomar el toro por los cuernos y eso nos encanta..!&nbsp; Tenemos muchas cosas que te ayudarán a iniciar tu camino en internet. Escríbenos, llámanos o déjanos saber tus requerimientos y encontraremos la mejor forma de ayudarte =)</p>
+<ul>
+	<li>
+		<div>
+			<strong>Foros de debate</strong> - <a href="http://www.farencyhost.com/">http://www.farencyhost.com/</a></div>
+	</li>
+	
+	<li>
+		<div>
+			<strong>Videos Instructivos</strong> - <a href="http://hostingecuador.ec/videos-instructivos">http://hostingecuador.ec/videos-instructivos</a></div>
+	</li>
+	<li>
+		<div>
+			<strong>Ticketes de soporte especializado</strong> - <a href="http://hostingecuador.ec/contactenos">http://hostingecuador.ec/contactenos</a></div>
+	</li>
+	<li>
+		<div>
+			<strong>Chat en línea</strong> - Disponible de lunes a viernes en horario extendido de 8:00am - 20:00pm</div>
+	</li>
+	
+</ul>
+<div>
+<section id="legal">
+	<div class="page-header">
+	  <h3>Terminos y condiciones de uso del servicio</h3><hr class="notop"></div>
+	<p>&nbsp;
+</p>
+<div class="alert alert-info">
+	<strong>IMPORTANTE!</strong> Grupo Farency se reserva el derecho de cambiar los términos y condiciones de uso del servicio  sin previo aviso.</div>
+<p>&nbsp;
+	</p>
+<p>
+	Puede acceder a la descarga de la versión PDF<a href="http://www.grupofarency.com/contratohostingecuador.pdf.zip"> desde aquí</a>.</p>
+<p>Si consideras que ha faltado algún tema importante por describir en este documento escríbenos y lo tomaremos en cuenta para futuras entregas</p>
+<p>
+	Gracias por utilizar nuestro servicios<br>
+	<strong>Grupo Farency - Ecuador</strong></p>
+<p>&nbsp;
+	</p>
+</section>
+
+	</div>
+</body>
+</html>
